@@ -1,6 +1,12 @@
 import './App.css';
-import {Title, Wrapper, Button, TomatoButton, StyledLink, Input, PasswordInput, Rotate, Thing} from './styles';
+import {ThemeProvider} from 'styled-components';
+import {Title, Wrapper, Button, TomatoButton, StyledLink, Input, PasswordInput, Rotate, Thing, ThemedButton} from './styles';
 import Counter from './components/Counter';
+import ViewTheme from './components/ViewTheme';
+
+const theme = {
+  main:"mediumseagreen",
+}
 
 function App() {
   return (
@@ -40,6 +46,15 @@ function App() {
       <div className="something-else">
        <Thing>Splendid</Thing>
       </div>
+
+      <h1>7.Theming</h1>
+      <ThemedButton>Normal</ThemedButton>
+
+      <ThemeProvider theme={theme}>
+        <ThemedButton>Normal</ThemedButton> 
+        <ThemedButton theme={{main: 'darkorange'}}>Overridden</ThemedButton> 
+        <ViewTheme />
+      </ThemeProvider>
 
     </Wrapper>
   );

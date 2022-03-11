@@ -6,5 +6,6 @@ import Paragraph from './Paragraph.styled';
 import Input, {PasswordInput} from './Inputs.styled';
 import Rotate from './Rotate.styled';
 import Thing from './Thing.styled';
+import ThemedButton from './ThemedButton.styled';
 
-export {Title,Wrapper, Button, TomatoButton, StyledLink, Paragraph, Input, PasswordInput, Rotate, Thing};
+export {Title,Wrapper, Button, TomatoButton, StyledLink, Paragraph, Input, PasswordInput, Rotate, Thing, ThemedButton};
