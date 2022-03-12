@@ -3,6 +3,7 @@ import {ThemeProvider} from 'styled-components';
 import {Title, Wrapper, Button, TomatoButton, StyledLink, Input, PasswordInput, Rotate, Thing, ThemedButton} from './styles';
 import Counter from './components/Counter';
 import ViewTheme from './components/ViewTheme';
+import {Link, Icon, Label} from './styles/ReferByOtherComponents.styled';
 
 const theme = {
   main:"mediumseagreen",
@@ -56,6 +57,15 @@ function App() {
         <ViewTheme />
       </ThemeProvider>
 
+      <h1>8. Referring to other components</h1>
+      <Link href="#">
+        <Icon viewBox="0 0 20 20">
+          <path d="M10 15h8c1 0 2-1 2-2V3c0-1-1-2-2-2H2C1 1 0 2 0 3v10c0 1 1 2 2 2h4v4l4-4zM5 7h2v2H5V7zm4 0h2v2H9V7zm4 0h2v2h-2V7z"/>
+        </Icon>
+        <Label>
+          Hovering my parent changes my style!
+        </Label>
+      </Link>
     </Wrapper>
   );
 }
